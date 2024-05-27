@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e; /* Dark background */
+    color: white; /* Light text color for readability */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center the music player horizontally */
+    align-items: center; /* Center the music player vertically */
+    height: 100vh; /* Fill the entire viewport */
+  }
+  
+  .container {
+    width: 80%; /* Responsive width adjustment */
+    max-width: 600px; /* Set a maximum width for larger screens */
+    background-color: #282828; /* Slightly darker background for the player */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  }
+  
+  .player {
+    text-align: center; /* Center text elements within the player */
+    padding: 20px; /* Add some padding for spacing */
+  }
+  
+  .album-cover img {
+    width: 250px; /* Increased width for a more prominent album cover */
+    height: 250px;
+    border-radius: 10px;
+    margin-bottom: 30px; /* Increased margin for better separation */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .song-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .song-info h2,
+  .song-info p {
+    margin: 0 10px; /* Spacing between song title and artist */
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: space-between; /* Distribute controls evenly */
+    align-items: center;
+    width: 100%; /* Stretch controls across the entire player width */
+    margin-bottom: 20px;
+  }
+  
+  .control-btn {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .control-btn:hover {
+    color: #333; /* Subtle color change on hover for feedback */
+  }
+  
+  .progress-bar {
+    width: 70%; /* Adjust width based on desired size */
+  }
+  
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 5px;
+    background: #ddd; /* Light gray track color */
+    border-radius: 5px;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #1db954; /* Green color for the progress handle */
+    cursor: pointer;
+  }
+  
+  .volume-control {
+    display: flex; /* Flexbox for volume icon and slider */
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .volume-control .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCbG9jayI9IjAgMCAyMCAyMCIgdXNuaWQ9ImxhdGVyIj48cGF0aCBkPSJNNC4xOCA5LjE4bDIuODggMi44OCA0LjE4LTQuMTggLTAuNzYtMC43NiAtMi44OCAyLjg4eiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg=="); /* Replace with your volume icon SVG */
+    background-repeat
+    background-repeat: no-repeat; /* Prevent repeating of the icon */
+    background-position: center; /* Center the icon within the element */
+  }
+  
+  .volume-control input[type="range"] {
+    width: calc(100% - 20px); /* Subtract icon width for proper slider size */
+  }
+  
+  .playlist-container {
+    width: 100%; /* Stretch playlist container to full width */
+  }
+  
+  .playlist-container h3 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .playlist {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Allow songs to wrap to multiple lines if needed */
+    justify-content: space-between; /* Distribute songs evenly */
+  }
+  
+  .playlist li {
+    width: 45%; /* Adjust width based on desired number of songs per row */
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #333; /* Darker background for playlist items */
+    color: white; /* Light text color for readability */
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s; /* Smooth transition on hover */
+  }
+  
+  .playlist li:hover {
+    background-color: #282828; /* Slightly lighter background on hover */
+  }  
